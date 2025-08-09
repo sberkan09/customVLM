@@ -29,6 +29,7 @@ export HF_MODULES_CACHE=/workspace/.cache/huggingface/modules
 export HF_METRICS_CACHE=/workspace/.cache/huggingface/metrics
 export TORCH_HOME=/workspace/.cache/torch
 export TMPDIR=/workspace/tmp
+export BASE_LLM="lmsys/gpt-oss-20b-bf16"
 EOF
 
 # Ortam bilgisi
