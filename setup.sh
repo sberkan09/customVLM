@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+# ================================
+# CONFIG
+# ================================
+PYTHON_VERSION=3.11
+VENV_NAME=.venv
+BASE_LLM="lmsys/gpt-oss-20b-bf16"
+HF_HOME_DIR="$PWD/.cache/huggingface"
+
 # Ortam değişkenleri (cache'ler /workspace altına)
 export HF_HOME=/workspace/.cache/huggingface
 export TRANSFORMERS_CACHE=$HF_HOME
@@ -16,6 +24,7 @@ mkdir -p "$HF_HOME" "$HF_DATASETS_CACHE" "$HF_MODULES_CACHE" "$HF_METRICS_CACHE"
 echo "[INFO] Cache dizinleri /workspace altına ayarlandı:"
 echo "HF_HOME=$HF_HOME"
 echo "TORCH_HOME=$TORCH_HOME"
+
 
 # ================================
 # 1) Python ortamı kur
