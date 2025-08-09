@@ -1,0 +1,5 @@
+.venv/*
+*__pycache__*
+data/*
+inference_data/*
+ckpts/*
