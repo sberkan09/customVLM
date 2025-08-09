@@ -20,6 +20,17 @@ export TORCH_HOME=/workspace/.cache/torch
 # Klasörleri oluştur
 mkdir -p "$HF_HOME" "$HF_DATASETS_CACHE" "$HF_MODULES_CACHE" "$HF_METRICS_CACHE" "$TORCH_HOME"
 
+# Kalıcı olsun istiyorsan .bashrc'ye yaz:
+cat <<'EOF' >> ~/.bashrc
+export HF_HOME=/workspace/.cache/huggingface
+export TRANSFORMERS_CACHE=$HF_HOME
+export HF_DATASETS_CACHE=/workspace/.cache/huggingface/datasets
+export HF_MODULES_CACHE=/workspace/.cache/huggingface/modules
+export HF_METRICS_CACHE=/workspace/.cache/huggingface/metrics
+export TORCH_HOME=/workspace/.cache/torch
+export TMPDIR=/workspace/tmp
+EOF
+
 # Ortam bilgisi
 echo "[INFO] Cache dizinleri /workspace altına ayarlandı:"
 echo "HF_HOME=$HF_HOME"
